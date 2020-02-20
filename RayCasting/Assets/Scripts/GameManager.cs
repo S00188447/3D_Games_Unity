@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
         generatedResources.Add(ResourceTypes.Coal, 0);
         generatedResources.Add(ResourceTypes.Water, 0);
         generatedResources.Add(ResourceTypes.Solid, 0);
-        generatedResources.Add(ResourceTypes.Gold, 0);    
+        generatedResources.Add(ResourceTypes.Gold, 0);
+
+        Invoke("Generate Resources", 2);
     }
 
     public void SpawnGenerator(Vector3 location, Vector3 normal, Color resourceColor)
@@ -39,10 +41,23 @@ public class GameManager : MonoBehaviour
             res.setMaterialColor(resourceColor);
 
             registeredGenerators[type]++;
-
-
-
         }
+
+        void GenerateResources()
+        {
+            generatedResources[ResourceTypes.Coal] += registeredGenerators[ResourceTypes.Coal];
+            generatedResources[ResourceTypes.Solid] += registeredGenerators[ResourceTypes.Solid];
+            generatedResources[ResourceTypes.Water] += registeredGenerators[ResourceTypes.Water];
+            generatedResources[ResourceTypes.Gold] += registeredGenerators[ResourceTypes.Gold];
+
+            //Debug.Log("Coal: " + generatedResources[ResourceTypes.Coal]);
+            //Debug.Log("Gold: " + generatedResources[ResourceTypes.Gold]);
+            //Debug.Log("Water: " + generatedResources[ResourceTypes.Water]);
+            //Debug.Log("Soil: " + generatedResources[ResourceTypes.Solid]);
+
+            Invoke("Generate Resources",2);
+        }
+
    
     }
 }

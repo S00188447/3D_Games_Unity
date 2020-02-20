@@ -10,7 +10,7 @@ public class OrbitRay : MonoBehaviour
     Ray mouseRay;
     Camera myCamera;
 
-
+    public GameManager manager;
     public Color selectedColor;
 
     void Update()
@@ -30,8 +30,7 @@ public class OrbitRay : MonoBehaviour
                 Texture2D texture = (Texture2D)material.mainTexture;
 
                 selectedColor = texture.GetPixelBilinear(uv.x, uv.y);
-
-                
+                manager.SpawnGenerator(point, normal, selectedColor);           
             }
         }
     }

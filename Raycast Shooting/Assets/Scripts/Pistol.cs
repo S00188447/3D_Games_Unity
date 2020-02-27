@@ -16,6 +16,7 @@ public class Pistol : RayCastWeapon
             {
                 ApplyDamage(health);
             }
+
             base.Fire(fireFromPosition);
 
         }

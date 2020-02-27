@@ -10,12 +10,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        
+        SetActiveWeapon(0);
     }
 
     private void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            activeWeapon.Fire(transform.position);
+        }
     }
 
     private void HandleWeaponSwitching()
@@ -38,5 +41,4 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
-
 }

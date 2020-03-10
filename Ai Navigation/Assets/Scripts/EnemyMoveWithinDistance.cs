@@ -2,17 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveWithinDistance : MonoBehaviour
+public class EnemyMoveWithinDistance : NashMeshMover
 {
-    // Start is called before the first frame update
+
+    public string TagToTrack = "Player";
+    GameObject trackerPlayer;
+    public float trackingDistance = 2;
+
+
     void Start()
     {
+
+        trackerPlayer = GameObject.FindGameObjectWithTag(TagToTrack);
+
+        base.Start();
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+
+        if(trackerPlayer != null)
+        {
+            if (Vector3.Distance(transform.position, trackerPlayer.transform.position) <= trackingDistance)
+            {
+                Resume();
+                MoveTo(trackerPlayer);
+            }
+            else
+            {
+                MoveTo(transform.position);
+                Stop();
+            }
+    
+        }
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = DebugLineColor;
+        Gizmos.DrawWireSphere(transform.position, trackingDistance);
+
+        base.OnDrawGizmos();
     }
 }

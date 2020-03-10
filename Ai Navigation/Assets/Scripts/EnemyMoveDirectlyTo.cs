@@ -10,9 +10,7 @@ public class EnemyMoveDirectlyTo : NavMeshMover
     void Start()
     {
         trackedPlayer = GameObject.FindGameObjectWithTag(tagToTrack);
-
-        base.start();
-        
+        base.start();    
     }
 
 
@@ -20,7 +18,7 @@ public class EnemyMoveDirectlyTo : NavMeshMover
     {
         if(trackedPlayer != null)
         {
-            MoveTo(trackedPlayer)
+            MoveTo(trackedPlayer);
         }
         
     }

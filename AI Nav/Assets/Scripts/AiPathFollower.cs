@@ -31,6 +31,7 @@ public class AiPathFollower : NavMeshMover
         if(other.gameObject.CompareTag("Pathnode") && other.gameObject.name == CurrrentNode.name)
         {
             Pathnode node;
+            
 
             if(other.TryGetComponent<Pathnode>(out node))
             {

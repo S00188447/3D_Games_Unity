@@ -415,11 +415,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SphereEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5019058171032718147, guid: a3b54a8873ae3f6438b40052abb1c84b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7201461370723007015, guid: a3b54a8873ae3f6438b40052abb1c84b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1306,11 +1301,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SphereEnemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5019058171032718147, guid: a3b54a8873ae3f6438b40052abb1c84b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7201461370723007015, guid: a3b54a8873ae3f6438b40052abb1c84b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1736,11 +1726,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SphereEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5019058171032718147, guid: a3b54a8873ae3f6438b40052abb1c84b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7201461370723007015, guid: a3b54a8873ae3f6438b40052abb1c84b,
         type: 3}
